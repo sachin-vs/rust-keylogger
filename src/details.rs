@@ -1,11 +1,16 @@
 use std::process::Command;
 #[derive(Debug)]
+//Struct showing details of the system
+//OS - Linux/Windows
+//Username - whoami
+//Event path - /dev/input/event* path of the keyboard event file
 pub struct SystemDetails{
     pub os:String,
     pub username:String,
     pub event_path:String,
 }
-
+//Function to get system details
+//All system details are taen using shell scripts
 fn shell_command(cmd:&str)->String{
     let mut my_cmd = Command::new("sh");
     my_cmd.arg("-c")
@@ -25,7 +30,7 @@ fn shell_command(cmd:&str)->String{
     return output;
 }
 
-
+//Parameters of sell commands are given here
 impl SystemDetails {
     pub fn details()->SystemDetails{
         SystemDetails{
