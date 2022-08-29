@@ -1,9 +1,9 @@
 use std::process::Command;
 #[derive(Debug)]
 pub struct SystemDetails{
-    os:String,
-    username:String,
-    event_path:String,
+    pub os:String,
+    pub username:String,
+    pub event_path:String,
 }
 
 fn shell_command(cmd:&str)->String{
