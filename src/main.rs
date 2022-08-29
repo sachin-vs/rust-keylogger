@@ -1,3 +1,5 @@
-fn main() {
-    println!("Hello, world!");
+
+mod  details;
+fn main(){
+    println!("{:?}",details::SystemDetails::details());
 }
